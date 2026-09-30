@@ -105,7 +105,7 @@ section{padding:100px 0;position:relative}
 .hero-scroll .mouse::before{content:'';position:absolute;top:6px;left:50%;transform:translateX(-50%);width:3px;height:8px;background:var(--gold);border-radius:3px;animation:scrollAnim 1.8s infinite}
 @keyframes scrollAnim{0%{opacity:1;transform:translateX(-50%) translateY(0)}100%{opacity:0;transform:translateX(-50%) translateY(12px)}}
 
-/* ===== Stats Showcase (NEW DESIGN) ===== */
+/* ===== Stats Showcase ===== */
 .stats{padding:80px 0;background:var(--bg);border-bottom:1px solid var(--br)}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .stat-card{background:#FFF;border:1px solid var(--br);border-radius:24px;padding:32px 20px;text-align:center;position:relative;overflow:hidden;transition:var(--tr);box-shadow:var(--sh-s);display:flex;flex-direction:column;align-items:center;gap:4px}
@@ -233,15 +233,15 @@ section{padding:100px 0;position:relative}
 
 /* ===== Reviews ===== */
 .reviews{background:linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 100%)}
-.reviews-note{text-align:center;font-size:.9rem;color:var(--t2);margin-bottom:32px;font-weight:600}
-.reviews-note strong{color:var(--gold-d);font-weight:900}
+.reviews-note{text-align:center;font-size:.95rem;color:var(--t2);margin-bottom:32px;font-weight:600}
+.reviews-note strong{color:var(--gold-d);font-weight:900;font-size:1.05em}
 .reviews-header{display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;margin-bottom:50px;background:var(--card);border:1px solid var(--br);border-radius:var(--r-l);padding:28px 36px;box-shadow:var(--sh-m);max-width:640px;margin-left:auto;margin-right:auto;position:relative;overflow:hidden}
 .reviews-header::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(234,179,8,.04),transparent 60%);pointer-events:none}
 .reviews-score{display:flex;flex-direction:column;align-items:center;gap:4px;position:relative}
 .reviews-num{font-family:'Inter',sans-serif;font-size:3.4rem;font-weight:900;background:linear-gradient(135deg,var(--gold-d),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;letter-spacing:-3px}
 .reviews-stars{display:flex;gap:3px}
 .reviews-stars svg{width:18px;height:18px;fill:#EAB308}
-.reviews-info{display:flex;flex-direction:column;gap:3px;position:relative}
+.reviews-info{display:flex;flex-direction:column;gap:3px;position:relative;text-align:center;align-items:center}
 .reviews-info strong{font-size:1.05rem;font-weight:900;color:var(--t1)}
 .reviews-info span{font-size:.82rem;color:var(--t3);font-weight:500}
 .reviews-google-btn{display:inline-flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--br);color:var(--t1);padding:10px 18px;border-radius:var(--r-f);font-weight:800;font-size:.85rem;transition:var(--tr);position:relative}
@@ -255,7 +255,8 @@ section{padding:100px 0;position:relative}
 .review-name{font-weight:900;color:var(--t1);font-size:.95rem;margin-bottom:3px;letter-spacing:-.2px}
 .review-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .review-meta span{font-size:.7rem;color:var(--t3);font-weight:600}
-.review-stars-sm{color:#EAB308;font-size:.85rem;letter-spacing:1px;font-weight:900}
+.review-stars-sm{display:inline-flex;gap:2px;align-items:center}
+.review-stars-sm svg{width:14px;height:14px;fill:#EAB308}
 .review-text{color:var(--t2);font-size:.9rem;line-height:1.75;position:relative;z-index:2;flex:1;font-weight:500}
 
 /* ===== Tiger Club ===== */
@@ -468,7 +469,7 @@ section{padding:100px 0;position:relative}
   .why-card h3{font-size:.95rem}
   .why-card p{font-size:.82rem}
 
-  .reviews-note{font-size:.82rem;margin-bottom:24px}
+  .reviews-note{font-size:.85rem;margin-bottom:24px}
   .reviews-header{padding:22px;gap:16px;flex-direction:column;margin-bottom:32px}
   .reviews-num{font-size:2.6rem}
   .reviews-grid{grid-template-columns:1fr;gap:12px}
@@ -511,10 +512,8 @@ section{padding:100px 0;position:relative}
 </head>
 <body>
 
-<!-- ===== Progress Bar ===== -->
 <div class="progress-bar" id="progressBar"></div>
 
-<!-- ===== Sidebar Social ===== -->
 <aside class="sidebar-social" aria-label="تواصل اجتماعي">
 <a href="https://wa.me/966569849164" target="_blank" rel="noopener" class="sidebar-icon wa" aria-label="واتساب">
 <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/></svg>
@@ -533,7 +532,6 @@ section{padding:100px 0;position:relative}
 </a>
 </aside>
 
-<!-- ===== Header ===== -->
 <header class="header" id="header">
 <div class="container header-inner">
 <a href="#hero" class="logo-wrap" aria-label="شايني كلين">
@@ -555,7 +553,6 @@ section{padding:100px 0;position:relative}
 
 <main>
 
-<!-- ===== Hero Full Video + Parallax ===== -->
 <section class="hero" id="hero">
 <div class="hero-video-wrap" id="heroVideoWrap">
 <video id="heroVideo" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture preload="auto" poster="assets/hero-poster.jpg">
@@ -587,7 +584,6 @@ section{padding:100px 0;position:relative}
 </div>
 </section>
 
-<!-- ===== Stats Showcase (NEW) ===== -->
 <section class="stats">
 <div class="container">
 <div class="stats-grid">
@@ -611,7 +607,6 @@ section{padding:100px 0;position:relative}
 </div>
 </section>
 
-<!-- ===== Services Bento ===== -->
 <section class="services" id="services">
 <div class="container">
 <div class="sec-head">
@@ -710,7 +705,6 @@ section{padding:100px 0;position:relative}
 </div>
 </section>
 
-<!-- ===== Booking + How it Works ===== -->
 <section class="booking" id="booking">
 <div class="container">
 <div class="sec-head">
@@ -771,12 +765,11 @@ section{padding:100px 0;position:relative}
 </div>
 
 <button type="submit" class="btn-booking">
-<svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592"/></svg>
+<svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326z"/></svg>
 إرسال الحجز عبر واتساب
 </button>
 </form>
 
-<!-- How it works -->
 <div class="how-works">
 <h3 class="how-title">كيف <span>يعمل الحجز؟</span></h3>
 <p class="how-sub">4 خطوات بسيطة ويوصلك التأكيد</p>
@@ -807,7 +800,6 @@ section{padding:100px 0;position:relative}
 </div>
 </section>
 
-<!-- ===== Gallery Horizontal ===== -->
 <section class="gallery" id="gallery">
 <div class="container">
 <div class="sec-head">
@@ -865,7 +857,6 @@ section{padding:100px 0;position:relative}
 </div>
 </section>
 
-<!-- ===== Timeline ===== -->
 <section class="timeline">
 <div class="container">
 <div class="sec-head">
@@ -906,7 +897,6 @@ section{padding:100px 0;position:relative}
 </div>
 </section>
 
-<!-- ===== Why ===== -->
 <section class="why">
 <div class="container">
 <div class="sec-head">
@@ -968,7 +958,6 @@ section{padding:100px 0;position:relative}
 </div>
 </section>
 
-<!-- ===== Reviews ===== -->
 <section class="reviews" id="reviews">
 <div class="container">
 <div class="sec-head">
@@ -977,7 +966,7 @@ section{padding:100px 0;position:relative}
 <p class="sec-sub">تقييمات حقيقية من زوارنا على Google Maps</p>
 </div>
 
-<p class="reviews-note">قيمنا أكثر من <strong>1000 عميل</strong> على Google Maps</p>
+<p class="reviews-note">قيمنا أكثر من <strong>1500 عميل</strong> على Google Maps</p>
 
 <div class="reviews-header">
 <div class="reviews-score">
@@ -1008,7 +997,7 @@ section{padding:100px 0;position:relative}
 <div>
 <div class="review-name">Ksa Ksa</div>
 <div class="review-meta">
-<span class="review-stars-sm">★★★★★</span>
+<span class="review-stars-sm"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
 <span>مراجعة واحدة</span>
 </div>
 </div>
@@ -1022,7 +1011,7 @@ section{padding:100px 0;position:relative}
 <div>
 <div class="review-name">مؤيد</div>
 <div class="review-meta">
-<span class="review-stars-sm">★★★★★</span>
+<span class="review-stars-sm"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
 <span>15 مراجعة · الهفوف</span>
 </div>
 </div>
@@ -1036,7 +1025,7 @@ section{padding:100px 0;position:relative}
 <div>
 <div class="review-name">Meme</div>
 <div class="review-meta">
-<span class="review-stars-sm">★★★★★</span>
+<span class="review-stars-sm"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
 <span>46 مراجعة · الهفوف</span>
 </div>
 </div>
@@ -1050,7 +1039,7 @@ section{padding:100px 0;position:relative}
 <div>
 <div class="review-name">Dawood Alowayed</div>
 <div class="review-meta">
-<span class="review-stars-sm">★★★★★</span>
+<span class="review-stars-sm"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
 <span>مراجعة واحدة</span>
 </div>
 </div>
@@ -1064,7 +1053,7 @@ section{padding:100px 0;position:relative}
 <div>
 <div class="review-name">Abubaker Ahmed</div>
 <div class="review-meta">
-<span class="review-stars-sm">★★★★★</span>
+<span class="review-stars-sm"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
 <span>3 مراجعات</span>
 </div>
 </div>
@@ -1078,7 +1067,7 @@ section{padding:100px 0;position:relative}
 <div>
 <div class="review-name">عبدالله السويج</div>
 <div class="review-meta">
-<span class="review-stars-sm">★★★★★</span>
+<span class="review-stars-sm"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
 <span>63 مراجعة · مرشد محلي</span>
 </div>
 </div>
@@ -1090,7 +1079,6 @@ section{padding:100px 0;position:relative}
 </div>
 </section>
 
-<!-- ===== Tiger Club ===== -->
 <section class="tiger">
 <div class="container">
 <div class="tiger-inner reveal">
@@ -1107,7 +1095,6 @@ section{padding:100px 0;position:relative}
 </div>
 </section>
 
-<!-- ===== Contact + Map ===== -->
 <section class="contact" id="contact">
 <div class="container">
 <div class="sec-head">
@@ -1178,7 +1165,6 @@ section{padding:100px 0;position:relative}
 </div>
 </section>
 
-<!-- ===== CTA ===== -->
 <section class="cta">
 <div class="container cta-content">
 <h2>جاهز لتجربة <span>شايني كلين</span>؟</h2>
@@ -1198,7 +1184,6 @@ section{padding:100px 0;position:relative}
 
 </main>
 
-<!-- ===== Footer ===== -->
 <footer class="footer">
 <div class="container">
 <div class="footer-grid">
@@ -1239,12 +1224,10 @@ section{padding:100px 0;position:relative}
 </div>
 </footer>
 
-<!-- ===== Floating WhatsApp ===== -->
 <a href="https://wa.me/966569849164?text=السلام%20عليكم%2C%20أبغى%20أحجز%20موعد" target="_blank" rel="noopener" class="float-wa" aria-label="واتساب">
 <svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
 </a>
 
-<!-- ===== Back to Top ===== -->
 <button class="back-top" id="backTop" aria-label="العودة للأعلى">
 <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
@@ -1280,10 +1263,11 @@ if (heroVideo && !isMobile) {
   }, { passive: true });
 }
 
-// ===== Video Autoplay + Loop (ALWAYS) =====
+// ===== Video Autoplay + Loop (AGGRESSIVE) =====
 document.addEventListener('DOMContentLoaded', function() {
   var v = document.getElementById('heroVideo');
   if (!v) return;
+
   v.muted = true;
   v.loop = true;
   v.setAttribute('muted', '');
@@ -1304,7 +1288,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   play();
 
-  // First user interaction fallback
+  // First interaction fallback
   ['touchstart','click','scroll'].forEach(function(ev){
     var once = function() { play(); document.removeEventListener(ev, once); };
     document.addEventListener(ev, once, { passive: true });
@@ -1315,23 +1299,30 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!document.hidden) play();
   });
 
-  // Resume when hero comes back into view (fix "stops when scrolling down and back up")
-  var heroSection = document.getElementById('hero');
-  if (heroSection) {
-    var heroObs = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) play();
-      });
-    }, { threshold: 0.05 });
-    heroObs.observe(heroSection);
-  }
+  // ===== AGGRESSIVE resume: check every 600ms =====
+  setInterval(function() {
+    if (document.hidden) return;
+    var heroEl = document.getElementById('hero');
+    if (!heroEl) return;
+    var rect = heroEl.getBoundingClientRect();
+    var inView = rect.bottom > 0 && rect.top < window.innerHeight;
+    if (inView && (v.paused || v.ended)) {
+      v.play().catch(function(){});
+    }
+  }, 600);
 
-  // Catch pause events and resume
-  v.addEventListener('pause', function() {
-    setTimeout(function() {
-      if (v.paused && !document.hidden) play();
-    }, 100);
+  // Force loop restart if video ends
+  v.addEventListener('ended', function() {
+    v.currentTime = 0;
+    v.play().catch(function(){});
   });
+
+  // Resume on any scroll
+  window.addEventListener('scroll', function() {
+    if (v.paused && !document.hidden) {
+      v.play().catch(function(){});
+    }
+  }, { passive: true });
 });
 
 // ===== Counters with "+" =====
