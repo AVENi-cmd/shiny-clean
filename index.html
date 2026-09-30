@@ -18,7 +18,7 @@
   --text-primary:#0F172A;--text-secondary:#475569;--text-muted:#94A3B8;--text-white:#FFF;
   --border-subtle:rgba(15,23,42,.08);--border-gold:rgba(234,179,8,.25);--border-blue:rgba(30,64,175,.2);--border-card:rgba(15,23,42,.06);
   --radius-sm:12px;--radius-md:16px;--radius-lg:24px;--radius-xl:32px;--radius-full:9999px;
-  --shadow-sm:0 4px 12px -2px rgba(15,23,42,.06);--shadow-md:0 10px 30px -5px rgba(15,23,42,.1);--shadow-lg:0 20px 45px -10px rgba(15,23,42,.15);--shadow-gold:0 15px 40px -10px rgba(234,179,8,.4);--shadow-blue:0 15px 40px -10px rgba(30,64,175,.35);
+  --shadow-sm:0 4px 12px -2px rgba(15,23,42,.06);--shadow-md:0 10px 30px -5px rgba(15,23,42,.1);--shadow-lg:0 20px 45px -10px rgba(15,23,42,.15);
   --transition:.3s cubic-bezier(.2,.8,.2,1);
 }
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
@@ -63,15 +63,10 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .header-wa-btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(37,211,102,.5)}
 
 /* ===== Hero — Text Top + Video Bottom ===== */
-.hero-banner{position:relative;width:100%;padding:30px 0 70px;background:linear-gradient(160deg,#0F172A 0%,#1E293B 100%);overflow:hidden}
+.hero-banner{position:relative;width:100%;padding:40px 0 70px;background:linear-gradient(160deg,#0F172A 0%,#1E293B 100%);overflow:hidden}
 .hero-banner::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 30% 30%,rgba(234,179,8,.12) 0%,transparent 40%),radial-gradient(circle at 70% 70%,rgba(30,64,175,.15) 0%,transparent 40%);pointer-events:none}
 
 .hero-container{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:0 20px;display:flex;flex-direction:column;gap:32px}
-
-.hero-top-info{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;padding:14px 20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-full);backdrop-filter:blur(12px);margin:0 auto}
-.hero-top-item{display:flex;align-items:center;gap:8px;color:#E2E8F0;font-size:.88rem;font-weight:700}
-.hero-top-item svg{width:16px;height:16px;color:var(--gold-primary);flex-shrink:0}
-.hero-top-item:not(:last-child)::after{content:'';width:1px;height:16px;background:rgba(255,255,255,.2);margin-right:16px}
 
 .hero-text-block{text-align:center;max-width:820px;margin:0 auto;color:#FFF}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(234,179,8,.15);border:1px solid rgba(234,179,8,.4);color:#FACC15;padding:8px 16px;border-radius:var(--radius-full);font-size:.82rem;font-weight:800;margin-bottom:20px;backdrop-filter:blur(12px);letter-spacing:.3px}
@@ -134,17 +129,14 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .care-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold-primary),var(--gold-light),var(--gold-primary));transform:scaleX(0);transform-origin:right;transition:transform .4s;z-index:3}
 .care-card:hover::before{transform:scaleX(1)}
 .care-card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -15px rgba(234,179,8,.25);border-color:var(--border-gold)}
-
 .care-card-large{grid-column:span 3;grid-row:span 2;background:linear-gradient(160deg,#FFF 0%,#FEFCE8 100%);min-height:420px}
 .care-card-medium{grid-column:span 3;min-height:200px}
-
 .care-icon{width:64px;height:64px;border-radius:18px;background:linear-gradient(135deg,var(--gold-primary),var(--gold-dark));color:#FFF;display:inline-flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 12px 30px -10px rgba(234,179,8,.5),inset 0 1px 0 rgba(255,255,255,.3);position:relative;overflow:hidden}
 .care-icon::after{content:'';position:absolute;top:0;left:0;right:0;height:50%;background:linear-gradient(180deg,rgba(255,255,255,.2),transparent)}
 .care-icon svg{width:30px;height:30px;position:relative;z-index:1}
 .care-icon.blue{background:linear-gradient(135deg,var(--blue-primary),var(--blue-dark));box-shadow:0 12px 30px -10px rgba(30,64,175,.5),inset 0 1px 0 rgba(255,255,255,.2)}
 .care-icon.small{width:52px;height:52px;border-radius:14px}
 .care-icon.small svg{width:24px;height:24px}
-
 .care-title{font-size:1.4rem;font-weight:900;color:var(--text-primary);margin-bottom:8px;letter-spacing:-.3px;line-height:1.3}
 .care-title.small{font-size:1.15rem}
 .care-desc{font-size:.92rem;color:var(--text-secondary);line-height:1.7;margin-bottom:16px;font-weight:500}
@@ -152,7 +144,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .care-list li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--text-secondary);font-weight:600;line-height:1.5}
 .care-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold-primary);margin-top:8px;flex-shrink:0}
 .care-card-medium .care-list li::before{background:var(--blue-primary)}
-
 .care-cta{margin-top:20px}
 .btn-care{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold-primary),var(--gold-dark));color:#0A0A0A;padding:12px 24px;border-radius:var(--radius-full);font-weight:900;font-size:.9rem;box-shadow:0 8px 20px rgba(234,179,8,.4);transition:var(--transition)}
 .btn-care:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(234,179,8,.55)}
@@ -183,7 +174,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .tiger-emoji{font-size:2.4rem;filter:drop-shadow(0 4px 12px rgba(234,179,8,.6));line-height:1}
 .tiger-title{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:900;color:#FFF;letter-spacing:-.5px;line-height:1.3}
 .tiger-desc{font-size:1.05rem;color:#CBD5E1;max-width:640px;margin:0 auto;line-height:1.75}
-
 .tiger-timeline{position:relative;padding:40px 0;margin-bottom:40px;z-index:2}
 .tiger-line{position:absolute;top:50%;left:5%;right:5%;height:3px;background:linear-gradient(90deg,transparent,var(--gold-primary),var(--gold-light),var(--gold-primary),transparent);border-radius:3px;z-index:1}
 .tiger-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;z-index:2}
@@ -210,7 +200,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .reviews-score-info span{font-size:.85rem;color:var(--text-muted);font-weight:500}
 .reviews-google-btn{display:inline-flex;align-items:center;gap:8px;background:var(--bg-base);border:1px solid var(--border-subtle);color:var(--text-primary);padding:10px 18px;border-radius:var(--radius-full);font-weight:800;font-size:.9rem;transition:var(--transition)}
 .reviews-google-btn:hover{background:#FFF;border-color:var(--gold-primary);color:var(--gold-dark);transform:translateY(-2px);box-shadow:0 8px 20px rgba(234,179,8,.2)}
-
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .review-card{background:#FFF;border:1px solid var(--border-card);border-radius:var(--radius-lg);padding:26px 22px;box-shadow:var(--shadow-sm);transition:var(--transition);position:relative;overflow:hidden;display:flex;flex-direction:column}
 .review-card::before{content:'"';position:absolute;top:-15px;left:14px;font-size:6rem;font-weight:900;color:rgba(234,179,8,.08);line-height:1;font-family:Georgia,serif;pointer-events:none}
@@ -223,7 +212,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .review-badge{font-size:.62rem;font-weight:700;background:var(--gold-subtle);color:var(--gold-dark);padding:2px 8px;border-radius:var(--radius-full);border:1px solid var(--border-gold);white-space:nowrap}
 .review-text{color:var(--text-secondary);font-size:.9rem;line-height:1.75;position:relative;z-index:2;flex:1;font-weight:500}
 
-/* ===== Gallery (Masonry) ===== */
+/* ===== Gallery ===== */
 .gallery-section{background:#FFF}
 .gallery-masonry{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:16px}
 .gallery-masonry .g-item{position:relative;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:var(--transition);cursor:pointer;background:#E2E8F0}
@@ -249,7 +238,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .booking-features{list-style:none;display:flex;flex-direction:column;gap:14px}
 .booking-features li{display:flex;align-items:center;gap:12px;font-size:.95rem;color:#E2E8F0;font-weight:600}
 .booking-features li svg{width:20px;height:20px;color:var(--gold-light);flex-shrink:0}
-
 .booking-form{background:#FFF;border-radius:var(--radius-xl);padding:36px;box-shadow:0 30px 60px -15px rgba(0,0,0,.5);border:1px solid rgba(234,179,8,.3)}
 .booking-form h3{font-size:1.3rem;font-weight:900;color:var(--text-primary);margin-bottom:6px;letter-spacing:-.3px}
 .booking-form p{font-size:.88rem;color:var(--text-muted);margin-bottom:24px;font-weight:500}
@@ -280,7 +268,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .contact-info-text{flex:1;min-width:0}
 .contact-info-label{font-size:.78rem;color:var(--text-muted);font-weight:800;margin-bottom:2px;letter-spacing:.3px}
 .contact-info-value{font-size:.95rem;color:var(--text-primary);font-weight:800;line-height:1.5;word-break:break-word}
-
 .contact-hours{background:linear-gradient(160deg,var(--gold-subtle),#FEFCE8);border:1px solid var(--border-gold);border-radius:var(--radius-lg);padding:24px;display:flex;flex-direction:column;gap:14px}
 .contact-hours-header{display:flex;align-items:center;gap:10px;font-size:.95rem;font-weight:900;color:var(--gold-dark)}
 .contact-hours-header svg{width:20px;height:20px}
@@ -293,7 +280,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .contact-hours-row{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;color:var(--text-secondary);font-weight:600;padding:8px 0;border-bottom:1px dashed var(--border-gold)}
 .contact-hours-row:last-child{border-bottom:none}
 .contact-hours-row strong{color:var(--text-primary);font-weight:900;direction:ltr}
-
 .contact-socials{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:8px}
 .contact-social{background:#FFF;border:1px solid var(--border-card);border-radius:var(--radius-md);padding:18px 8px;text-align:center;transition:var(--transition);display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;box-shadow:var(--shadow-sm)}
 .contact-social:hover{transform:translateY(-4px);border-color:var(--gold-primary);box-shadow:0 15px 30px -10px rgba(234,179,8,.3)}
@@ -357,7 +343,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .back-to-top svg{width:22px;height:22px;stroke:#FFF;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .back-to-top:hover svg{stroke:#0A0A0A}
 
-/* ===== Mobile Bottom Bar (5 أزرار مصغرة) ===== */
+/* ===== Mobile Bottom Bar ===== */
 .mobile-bottom-bar{display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(248,250,252,.98);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-top:1px solid rgba(15,23,42,.06);z-index:9999;padding:8px 8px;padding-bottom:calc(8px + env(safe-area-inset-bottom));box-shadow:0 -10px 30px rgba(15,23,42,.06);grid-template-columns:repeat(5,1fr);gap:5px}
 .mobile-bar-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:8px 2px;border-radius:11px;font-weight:800;font-size:.58rem;color:var(--text-primary);transition:var(--transition);text-decoration:none;position:relative;overflow:hidden;letter-spacing:.1px;min-height:52px;box-shadow:0 2px 8px rgba(15,23,42,.06)}
 .mobile-bar-btn svg{width:18px;height:18px;position:relative;z-index:2;flex-shrink:0}
@@ -404,23 +390,17 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   .header-call-btn{padding:10px;border-radius:50%;width:42px;height:42px;justify-content:center}
   .header-wa-btn .wa-text{display:none}
   .header-wa-btn{padding:10px;border-radius:50%;width:42px;height:42px;justify-content:center}
-
-  .hero-banner{padding:20px 0 50px}
+  .hero-banner{padding:30px 0 50px}
   .hero-container{gap:24px;padding:0 16px}
-  .hero-top-info{padding:10px 14px;gap:8px}
-  .hero-top-item{font-size:.72rem}
-  .hero-top-item:not(:last-child)::after{display:none}
   .hero-heading{font-size:1.6rem}
   .hero-subtext{font-size:.9rem;margin-bottom:20px}
   .hero-actions{flex-direction:column;width:100%;gap:10px}
   .btn-hero-primary, .btn-hero-secondary{width:100%;justify-content:center;padding:13px 20px}
   .hero-tag{font-size:.75rem;padding:6px 14px}
   .hero-video-frame{aspect-ratio:4/5;border-radius:var(--radius-lg)}
-
   .stats-section{padding:40px 0}
   .stat-number{font-size:2rem}
   .stat-label{font-size:.8rem}
-
   .wash-grid{grid-template-columns:1fr}
   .wash-grid .wash-card:last-child{grid-column:auto;max-width:none}
   .wash-card-head{padding:28px 22px 18px}
@@ -428,15 +408,12 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   .wash-icon{width:58px;height:58px;border-radius:16px}
   .wash-icon svg{width:28px;height:28px}
   .wash-title{font-size:1.3rem}
-
   .care-bento{grid-template-columns:1fr;gap:16px}
   .care-card-large, .care-card-medium{grid-column:auto;grid-row:auto;min-height:auto;padding:26px 22px}
   .care-title{font-size:1.2rem}
   .care-title.small{font-size:1.05rem}
-
   .why-grid{grid-template-columns:1fr;gap:14px}
   .why-card{padding:22px 18px}
-
   .tiger-title-wrap{padding:10px 20px;gap:10px}
   .tiger-emoji{font-size:1.8rem}
   .tiger-title{font-size:1.5rem}
@@ -446,29 +423,22 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   .tiger-step-circle svg{width:28px;height:28px}
   .tiger-step h3{font-size:.98rem}
   .tiger-step p{font-size:.78rem}
-
   .reviews-header{padding:20px;gap:16px;flex-direction:column}
   .reviews-grid{grid-template-columns:1fr;gap:14px}
-
   .gallery-masonry{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;gap:12px}
   .gallery-masonry .g-tall-wide{grid-row:span 2;grid-column:span 2}
   .gallery-overlay{transform:translateY(0);padding:14px 12px 10px;font-size:.8rem}
-
   .booking-form{padding:26px 22px}
   .form-row{grid-template-columns:1fr}
-
   .contact-section{padding:60px 0}
   .map-embed{min-height:280px}
   .map-embed iframe{min-height:280px}
   .contact-socials{grid-template-columns:repeat(2,1fr)}
-
   .cta-banner{padding:70px 0 60px}
   .banner-actions{flex-direction:column;width:100%}
   .btn-banner-primary, .btn-banner-secondary{width:100%;justify-content:center}
-
   .footer-grid{grid-template-columns:1fr;gap:28px}
   .footer{padding-bottom:110px}
-
   .mobile-bottom-bar{display:grid}
   .back-to-top{bottom:100px;right:14px;left:auto;width:46px;height:46px}
   .nine-floating-dock{bottom:100px;left:14px}
@@ -500,7 +470,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   .dock-wa-btn{width:48px;height:48px}
   .dock-wa-btn svg{width:24px;height:24px}
 }
-
 @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 .animate-fade-in{animation:fadeInUp .8s cubic-bezier(.2,.8,.2,1) both}
 </style>
@@ -537,25 +506,9 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 
 <main>
 
-<!-- ===== Hero — Text Top + Video Bottom ===== -->
+<!-- ===== Hero — Text Top + Video Bottom (بدون شريط علوي) ===== -->
 <section class="hero-banner" id="hero">
 <div class="hero-container">
-
-<!-- الشريط العلوي -->
-<div class="hero-top-info">
-<div class="hero-top-item">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-<span>غسيل متنقل</span>
-</div>
-<div class="hero-top-item">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-<span>مفتوح حتى 3 فجراً</span>
-</div>
-<div class="hero-top-item">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-<span>العزيزية الثاني · الأحساء</span>
-</div>
-</div>
 
 <!-- النص والأزرار (فوق الفيديو) -->
 <div class="hero-text-block">
@@ -585,7 +538,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 
 <!-- الفيديو (تحت - بإطار مميز) -->
 <div class="hero-video-frame">
-<video id="heroVideo" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture preload="auto" poster="assets/exterior-night.png">
+<video id="heroVideo" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture preload="auto">
 <source src="assets/hero-video.mp4" type="video/mp4">
 </video>
 <div class="hero-video-overlay"></div>
@@ -648,7 +601,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </div>
 
-<!-- Wash 2: غسيل تفصيلي — مميز -->
+<!-- Wash 2: غسيل تفصيلي -->
 <div class="wash-card" style="border: 2px solid var(--gold-primary);box-shadow:0 20px 45px -10px rgba(234,179,8,.3)">
 <div class="wash-card-head" style="background:linear-gradient(180deg,rgba(234,179,8,.08) 0%,transparent 100%)">
 <div class="wash-icon gold">
@@ -702,7 +655,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 
 <div class="care-bento">
 
-<!-- PPF — كبير -->
+<!-- PPF -->
 <div class="care-card care-card-large">
 <div class="care-icon">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -725,7 +678,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </div>
 
-<!-- نانو سيراميك — كبير -->
+<!-- نانو -->
 <div class="care-card care-card-large">
 <div class="care-icon blue">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg>
@@ -748,7 +701,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </div>
 
-<!-- التلميع — متوسطة -->
+<!-- التلميع -->
 <div class="care-card care-card-medium">
 <div class="care-icon small">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
@@ -763,7 +716,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </ul>
 </div>
 
-<!-- العزل — متوسطة -->
+<!-- العزل -->
 <div class="care-card care-card-medium">
 <div class="care-icon small blue">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -1041,7 +994,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
-<!-- ===== Gallery (Masonry) ===== -->
+<!-- ===== Gallery ===== -->
 <section class="section-block gallery-section" id="gallery">
 <div class="container">
 <div class="section-title">
@@ -1184,12 +1137,10 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 
 <div class="contact-map-wrapper">
 
-<!-- Map -->
 <div class="map-embed">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.4234785476397!2d49.6259973!3d25.3847114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e37a4e4ac7ea7df%3A0x9c3e1a5c4e9c9a5c!2sShiny%20Clean%20Car%20Wash!5e0!3m2!1sar!2ssa!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع شايني كلين"></iframe>
 </div>
 
-<!-- Contact Info -->
 <div class="contact-info">
 
 <a href="tel:0592220076" class="contact-info-card">
@@ -1222,7 +1173,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </a>
 
-<!-- Hours -->
 <div class="contact-hours">
 <div class="contact-hours-header">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
@@ -1244,7 +1194,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </div>
 
-<!-- Social -->
 <div class="contact-socials">
 <a href="https://wa.me/966569849164" target="_blank" rel="noopener" class="contact-social">
 <div class="contact-social-icon wa">
@@ -1368,34 +1317,29 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
-<!-- ===== Mobile Bottom Bar (5 أيقونات) ===== -->
+<!-- ===== Mobile Bottom Bar ===== -->
 <div class="mobile-bottom-bar">
 
-<!-- تيك توك -->
 <a href="https://www.tiktok.com/@shiny.group.carwash" target="_blank" rel="noopener" class="mobile-bar-btn mobile-bar-tiktok">
 <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
 <span>تيك توك</span>
 </a>
 
-<!-- سناب - شبح أبيض -->
 <a href="https://www.snapchat.com/add/shiny.clean" target="_blank" rel="noopener" class="mobile-bar-btn mobile-bar-snap">
 <svg viewBox="0 0 24 24"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"/></svg>
 <span>سناب</span>
 </a>
 
-<!-- إنستقرام -->
 <a href="https://www.instagram.com/shiny.clean.carwash" target="_blank" rel="noopener" class="mobile-bar-btn mobile-bar-ig">
 <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
 <span>إنستقرام</span>
 </a>
 
-<!-- موقعنا -->
 <a href="https://maps.app.goo.gl/zwa4ANXbRRTgn8Gv8?g_st=ic" target="_blank" rel="noopener" class="mobile-bar-btn mobile-bar-loc">
 <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
 <span>موقعنا</span>
 </a>
 
-<!-- احجز -->
 <a href="#booking" class="mobile-bar-btn mobile-bar-book">
 <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
 <span>احجز</span>
@@ -1424,7 +1368,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// ===== Video Autoplay + Loop (Robust) =====
+// ===== Video Autoplay + Loop (محسّن) =====
 document.addEventListener('DOMContentLoaded', function() {
   var v = document.getElementById('heroVideo');
   if (!v) return;
@@ -1435,41 +1379,49 @@ document.addEventListener('DOMContentLoaded', function() {
   v.setAttribute('playsinline', '');
   v.setAttribute('webkit-playsinline', '');
   
-  function tryPlay() {
-    var p = v.play();
-    if (p !== undefined) {
-      p.catch(function() {
-        var handler = function() {
-          v.play().catch(function(){});
-          document.removeEventListener('touchstart', handler);
-          document.removeEventListener('click', handler);
-          document.removeEventListener('scroll', handler);
-        };
-        document.addEventListener('touchstart', handler, { passive: true });
-        document.addEventListener('click', handler, { passive: true });
-        document.addEventListener('scroll', handler, { passive: true });
-      });
+  function playVideo() {
+    if (v.paused || v.ended) {
+      v.play().catch(function(){});
     }
   }
   
-  tryPlay();
+  playVideo();
+  
+  var firstInteraction = function() {
+    playVideo();
+    document.removeEventListener('touchstart', firstInteraction);
+    document.removeEventListener('click', firstInteraction);
+    document.removeEventListener('scroll', firstInteraction);
+  };
+  document.addEventListener('touchstart', firstInteraction, { passive: true });
+  document.addEventListener('click', firstInteraction, { passive: true });
+  document.addEventListener('scroll', firstInteraction, { passive: true });
   
   document.addEventListener('visibilitychange', function() {
-    if (!document.hidden && v.paused) {
-      v.play().catch(function(){});
+    if (!document.hidden) {
+      playVideo();
     }
   });
   
-  var heroObserver = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting && v.paused) {
+  var heroSection = document.getElementById('hero');
+  if (heroSection) {
+    var heroObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          playVideo();
+        }
+      });
+    }, { threshold: 0.1 });
+    heroObserver.observe(heroSection);
+  }
+  
+  v.addEventListener('pause', function() {
+    setTimeout(function() {
+      if (v.paused && !document.hidden) {
         v.play().catch(function(){});
       }
-    });
-  }, { threshold: 0.3 });
-  
-  var heroSection = document.getElementById('hero');
-  if (heroSection) heroObserver.observe(heroSection);
+    }, 100);
+  });
 });
 
 // ===== Stats Counter Animation =====
