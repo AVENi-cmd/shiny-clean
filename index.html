@@ -67,8 +67,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .hero-tag svg{width:14px;height:14px}
 .hero-heading{font-size:clamp(2rem,5.5vw,3.6rem);font-weight:900;line-height:1.2;margin-bottom:20px;color:#FFF;letter-spacing:-1px;text-shadow:0 4px 20px rgba(0,0,0,.8),0 2px 6px rgba(0,0,0,.6)}
 .hero-heading .gold{color:var(--gold-light);text-shadow:0 0 30px rgba(234,179,8,.5),0 4px 20px rgba(0,0,0,.8)}
-.hero-highlight{color:#FFF;position:relative;display:inline-block;text-shadow:0 4px 24px rgba(0,0,0,.9),0 2px 8px rgba(0,0,0,.7)}
-.hero-highlight::after{content:'';position:absolute;bottom:6px;left:0;right:0;height:6px;background:linear-gradient(90deg,transparent,var(--gold-primary) 20%,var(--gold-light) 50%,var(--gold-primary) 80%,transparent);border-radius:3px;z-index:-1;opacity:.9;filter:blur(.5px)}
 .hero-subtext{font-size:clamp(1rem,2vw,1.15rem);color:#E2E8F0;margin-bottom:32px;line-height:1.75;max-width:620px;font-weight:500;text-shadow:0 2px 8px rgba(0,0,0,.7)}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .btn-hero-primary{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--gold-primary),var(--gold-dark));color:#0A0A0A;padding:16px 32px;border-radius:var(--radius-full);font-weight:900;font-size:1.05rem;letter-spacing:.2px;box-shadow:0 10px 30px rgba(234,179,8,.45);transition:var(--transition)}
@@ -147,6 +145,18 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 .lounge-image-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
 .lounge-image-wrap:hover img{transform:scale(1.05)}
 .lounge-image-badge{position:absolute;top:20px;right:20px;background:rgba(234,179,8,.95);color:#0A0A0A;padding:8px 16px;border-radius:var(--radius-full);font-size:.82rem;font-weight:900;box-shadow:0 6px 20px rgba(234,179,8,.5);z-index:2}
+
+/* ===== Gallery ===== */
+.gallery-section{background:linear-gradient(180deg,#FFF 0%,#F8FAFC 100%)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,200px);gap:16px}
+.gallery-item{position:relative;border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;box-shadow:var(--shadow-soft);transition:var(--transition);background:#E2E8F0}
+.gallery-item-large{grid-column:span 2;grid-row:span 2}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-item:hover{box-shadow:0 25px 50px -12px rgba(30,64,175,.25);z-index:2}
+.gallery-overlay{position:absolute;inset:auto 0 0 0;padding:20px 16px 14px;background:linear-gradient(180deg,transparent 0%,rgba(10,10,15,.85) 100%);color:#FFF;font-weight:800;font-size:.9rem;letter-spacing:.3px;transform:translateY(100%);transition:transform .4s cubic-bezier(.2,.8,.2,1)}
+.gallery-item:hover .gallery-overlay{transform:translateY(0)}
+.gallery-overlay::before{content:'';display:inline-block;width:20px;height:2px;background:var(--gold-primary);margin-left:8px;vertical-align:middle;border-radius:2px}
 
 .building-section{background:#FFF}
 .building-card{max-width:900px;margin:0 auto;background:linear-gradient(160deg,#FFF 0%,#F8FAFC 100%);border:1px solid var(--border-blue);border-radius:var(--radius-xl);padding:40px;display:grid;grid-template-columns:1fr 1.2fr;gap:32px;align-items:center;box-shadow:0 20px 50px -15px rgba(30,64,175,.15);position:relative;overflow:hidden}
@@ -288,7 +298,6 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   .section-title{margin-bottom:36px}
   .hero-banner{min-height:70vh;padding:50px 0 60px}
   .hero-heading{font-size:clamp(1.8rem,7vw,2.6rem)}
-  .hero-highlight::after{height:4px;bottom:4px}
   .hero-subtext{font-size:.98rem}
   .hero-info-strip{gap:16px;flex-direction:column;align-items:flex-start;padding-top:20px;margin-top:24px}
   .services-grid{grid-template-columns:1fr}
@@ -300,6 +309,9 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
   .lounge-grid{grid-template-columns:1fr;gap:36px}
   .lounge-features{grid-template-columns:1fr}
   .lounge-image-wrap{aspect-ratio:16/10}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(3,160px);gap:12px}
+  .gallery-item-large{grid-column:span 2;grid-row:span 1}
+  .gallery-overlay{transform:translateY(0);padding:14px 12px 10px;font-size:.8rem}
   .building-card{grid-template-columns:1fr;padding:30px 24px;gap:24px}
   .building-icon{width:80px;height:80px;border-radius:20px}
   .building-icon svg{width:40px;height:40px}
@@ -486,15 +498,15 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <div class="service-card">
 <div class="service-card-head">
 <div class="service-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4  fill8-10V5l-8-3-="8 3v7cnone0 6 8 10 8 "10z"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
 </div>
-<h3 class="service-title"> strokeالحماية</h3>
-<p=" class="service-subtitle">currentحماية تدوم لسنوات</pColor>
+<h3 class="service-title">الحماية</h3>
+<p class="service-subtitle">حماية تدوم لسنوات</p>
 </div>
 <div class="service-body">
 <ul class="service-list">
-<li><span" class="check-icon"><svg view strokeBox="0 0 24-width 24"><polyline points="="20 6 9 172 4 12"/></svg></span>تركيب حماية PPF (الشفافة والملونة)</li>
-<li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>تركيب العازل الحراري للسيارات</li>
+<li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>تركيب PPF الشفاف والملون</li>
+<li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>العازل الحراري للسيارات</li>
 <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>متوافق مع أنظمة المرور السعودية</li>
 <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>تطبيق طبقة النانو سيراميك</li>
 <li><span class="check-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>حماية فائقة لطلاء السيارة</li>
@@ -506,7 +518,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </section>
 
-<!-- ===== Tiger Club (نادي النمر) ===== -->
+<!-- ===== Tiger Club ===== -->
 <section class="section-block tiger-section" id="tiger-club">
 <div class="container">
 <div class="tiger-header-wrap">
@@ -529,7 +541,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 
 <div class="tiger-card">
 <div class="tiger-card-icon">
-<svg viewBox="0 0 24 24"" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
 </div>
 <h3 class="tiger-card-name">باقة الغسيل الداخلي والخارجي</h3>
 <p class="tiger-card-desc">غسيل شامل — داخلي وخارجي — بعناية فائقة</p>
@@ -679,6 +691,41 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 </div>
 </section>
+
+<!-- ===== Gallery ===== -->
+<section class="section-block gallery-section" id="gallery">
+<div class="container">
+<div class="section-title">
+<span class="title-pill">من داخل المركز</span>
+<h2 class="main-title">جودة تبان من التفاصيل</h2>
+<p class="sub-title">لقطات حقيقية من مركز شايني كلين</p>
+</div>
+
+<div class="gallery-grid">
+<div class="gallery-item gallery-item-large">
+<img src="assets/exterior-night.png" alt="المنظر الخارجي بالليل" loading="lazy" decoding="async">
+<div class="gallery-overlay"><span>المنظر الخارجي</span></div>
+</div>
+<div class="gallery-item">
+<img src="assets/wash-bays.png" alt="مسارات الغسيل" loading="lazy" decoding="async">
+<div class="gallery-overlay"><span>مسارات الغسيل</span></div>
+</div>
+<div class="gallery-item">
+<img src="assets/entrance-night.png" alt="مدخل المركز" loading="lazy" decoding="async">
+<div class="gallery-overlay"><span>مدخل المركز</span></div>
+</div>
+<div class="gallery-item">
+<img src="assets/lexus-shine.png" alt="لمعان احترافي" loading="lazy" decoding="async">
+<div class="gallery-overlay"><span>لمعان احترافي</span></div>
+</div>
+<div class="gallery-item">
+<img src="assets/lounge.png" alt="استراحة شايني كلين" loading="lazy" decoding="async">
+<div class="gallery-overlay"><span>الاستراحة</span></div>
+</div>
+</div>
+
+</div>
+</section>
 <!-- ===== Building Care ===== -->
 <section class="section-block building-section" id="building">
 <div class="container">
@@ -824,7 +871,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 
 </div>
 
-<a href="https://maps.app.goo.gl/x" target="_blank" rel="noopener" class="contact-address">
+<a href="https://maps.app.goo.gl/xZ9DkPX5ZzpA99JA8?g_st=ic" target="_blank" rel="noopener" class="contact-address">
 <div class="contact-address-icon">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
 </div>
@@ -874,6 +921,7 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 <a href="#services">خدماتنا</a>
 <a href="#tiger-club">نادي النمر</a>
 <a href="#lounge">الاستراحة</a>
+<a href="#gallery">معرض الصور</a>
 <a href="#building">العزل الحراري</a>
 <a href="#contact">تواصل معنا</a>
 </div>
@@ -926,13 +974,26 @@ button{font-family:inherit;border:none;cursor:pointer;background:none;transition
 </div>
 
 <script>
+// ===== Current Year =====
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-// Video autoplay fix
+// ===== Video Autoplay + Loop (مع دعم كامل للجوال) =====
 document.addEventListener('DOMContentLoaded', function() {
   var v = document.getElementById('heroVideo');
   if (v) {
     v.muted = true;
+    v.loop = true;
+    v.setAttribute('loop', '');
+    v.setAttribute('muted', '');
+    v.setAttribute('playsinline', '');
+    
+    // إعادة التشغيل يدوياً عند الانتهاء (احتياطي لـ iOS)
+    v.addEventListener('ended', function() {
+      v.currentTime = 0;
+      v.play();
+    });
+    
+    // محاولة تشغيل أولى
     var p = v.play();
     if (p !== undefined) {
       p.catch(function() {
@@ -947,23 +1008,30 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('click', f, { passive: true });
       });
     }
+    
+    // إعادة التشغيل عند العودة للصفحة
+    document.addEventListener('visibilitychange', function() {
+      if (!document.hidden && v.paused) {
+        v.play();
+      }
+    });
   }
 });
 
-// Hours Status
+// ===== Hours Status (مفتوح/مغلق) =====
 function updateHoursStatus() {
   var now = new Date();
   var hours = now.getHours();
   var minutes = now.getMinutes();
   var totalMin = hours * 60 + minutes;
 
-  // Morning: 6:30 - 11:30
-  var morningOpen = 6 * 60 + 30;    // 390
-  var morningClose = 11 * 60 + 30;  // 690
+  // صباحاً: 6:30 - 11:30
+  var morningOpen = 6 * 60 + 30;
+  var morningClose = 11 * 60 + 30;
 
-  // Evening: 15:00 - 27:00 (3:00 next day)
-  var eveningOpen = 15 * 60;         // 900
-  var eveningClose = 27 * 60;        // 1620
+  // مساءً: 3:00 عصراً - 3:00 فجراً
+  var eveningOpen = 15 * 60;
+  var eveningClose = 27 * 60;
 
   var isOpen = false;
   var nextChange = '';
@@ -1002,7 +1070,7 @@ function updateHoursStatus() {
 updateHoursStatus();
 setInterval(updateHoursStatus, 60000);
 
-// Back to Top
+// ===== Back to Top =====
 var backBtn = document.getElementById('backToTop');
 window.addEventListener('scroll', function() {
   if (window.pageYOffset > 500) {
@@ -1013,6 +1081,25 @@ window.addEventListener('scroll', function() {
 });
 backBtn.addEventListener('click', function() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===== Smooth Scroll للروابط الداخلية =====
+document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    var targetId = this.getAttribute('href');
+    if (targetId === '#' || targetId === '#hero') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    var target = document.querySelector(targetId);
+    if (target) {
+      e.preventDefault();
+      var headerHeight = document.querySelector('.site-header').offsetHeight;
+      var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
 });
 </script>
 
