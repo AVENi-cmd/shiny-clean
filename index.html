@@ -332,8 +332,6 @@ section{padding:100px 0;position:relative}
 .info-card:hover{transform:translateY(-3px);box-shadow:var(--sh-m);border-color:var(--br-gold)}
 .info-icon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;transition:var(--tr)}
 .info-icon svg{width:22px;height:22px;fill:#FFF;position:relative;z-index:1}
-.info-icon.gold{background:linear-gradient(135deg,var(--gold),var(--gold-d))}
-.info-icon.gold svg{fill:#0A0A0A}
 .info-icon.blue{background:linear-gradient(135deg,var(--blue),var(--blue-d))}
 .info-text{flex:1;min-width:0}
 .info-label{font-size:.72rem;color:var(--t3);font-weight:800;margin-bottom:3px;letter-spacing:.5px}
@@ -456,8 +454,6 @@ section{padding:100px 0;position:relative}
 .spotlight{position:fixed;inset:0;pointer-events:none;z-index:1;opacity:0;transition:opacity 1.2s ease;mix-blend-mode:soft-light}
 .spotlight.active{opacity:1}
 .spotlight::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(234,179,8,.22) 0%,rgba(234,179,8,.08) 30%,transparent 65%);transform:translate(var(--mx,-500px),var(--my,-500px)) translate(-50%,-50%);will-change:transform}
-section{transition:filter .6s cubic-bezier(.2,.8,.2,1)}
-section:hover{filter:brightness(1.01)}
 
 @media(max-width:1024px){
   .nav{display:none}
@@ -523,15 +519,12 @@ section:hover{filter:brightness(1.01)}
   .premium-body{padding:22px 20px;gap:16px}
   .premium-top{gap:14px}
   .premium-icon{width:64px;height:64px;border-radius:18px}
-  .premium-icon::after{inset:3px;border-radius:15px}
   .premium-icon svg{width:32px;height:32px}
   .premium-title{font-size:1.15rem}
   .premium-subtitle{font-size:.75rem}
   .premium-desc{font-size:.85rem;padding:12px 14px;line-height:1.65}
   .premium-features{grid-template-columns:1fr;gap:6px}
   .premium-feature{font-size:.78rem;padding:9px 11px}
-  .premium-feature-icon{width:18px;height:18px}
-  .premium-feature-icon svg{width:10px;height:10px}
   .premium-cta{padding:12px 20px;font-size:.85rem}
   .booking-form{padding:26px 22px;border-radius:var(--r-l)}
   .booking-form h3{font-size:1.15rem}
@@ -540,73 +533,54 @@ section:hover{filter:brightness(1.01)}
   .how-steps{grid-template-columns:1fr 1fr;gap:20px}
   .how-steps::before{display:none}
   .how-num{width:48px;height:48px;font-size:1.1rem}
-  .how-step h4{font-size:.85rem}
-  .how-step p{font-size:.72rem}
   .gallery-scroll{padding:0 18px 24px;gap:14px}
-  .g-item{flex:0 0 280px;height:380px;border-radius:var(--r-m)}
+  .g-item{flex:0 0 240px;height:320px;border-radius:var(--r-m)}
   .g-overlay{padding:20px 18px 16px}
   .g-overlay h4{font-size:1rem}
   .tl-wrap::before{right:24px}
   .tl-item{gap:20px}
   .tl-num{width:50px;height:50px;font-size:1.1rem}
   .tl-content{padding:18px 20px}
-  .tl-content h3{font-size:1rem}
-  .tl-content p{font-size:.82rem}
   .why-grid{grid-template-columns:1fr;gap:12px}
   .why-card{padding:24px 20px;border-radius:var(--r-m)}
-  .why-icon{width:46px;height:46px;border-radius:14px}
-  .why-icon svg{width:22px;height:22px}
-  .why-card h3{font-size:.95rem}
-  .why-card p{font-size:.82rem}
   .reviews-note-wrap{grid-template-columns:1fr;gap:14px;margin-bottom:32px}
   .reviews-stat{padding:20px 22px;gap:14px;border-radius:var(--r-m)}
   .reviews-stat-icon{width:52px;height:52px;border-radius:16px}
-  .reviews-stat-icon svg{width:26px;height:26px}
-  .reviews-stat-num{font-size:1.7rem;letter-spacing:-1.2px}
-  .reviews-stat-text span{font-size:.8rem}
+  .reviews-stat-num{font-size:1.7rem}
   .reviews-stat-divider{width:100%;height:1px;padding:0}
   .reviews-stat-divider::before{width:60%;height:1px;background:linear-gradient(90deg,transparent,rgba(234,179,8,.4),transparent)}
   .reviews-header{padding:22px;gap:16px;flex-direction:column;margin-bottom:32px}
   .reviews-num{font-size:2.6rem}
   .reviews-grid{grid-template-columns:1fr;gap:12px}
   .review{padding:22px 20px;border-radius:var(--r-m)}
-  .review-text{font-size:.85rem}
   .tiger-inner{padding:26px 22px;border-radius:var(--r-l)}
   .tiger-emoji{font-size:2.6rem}
   .tiger-text h3{font-size:1.2rem}
-  .tiger-text p{font-size:.85rem}
   .tiger-btn{width:100%;justify-content:center;padding:13px 22px;font-size:.88rem}
   .contact-wrap{gap:16px}
   .map-box{min-height:300px;border-radius:var(--r-m)}
   .map-box iframe{min-height:300px}
   .info-card{padding:16px 18px;border-radius:var(--r-m);gap:12px}
   .info-icon{width:42px;height:42px;border-radius:12px}
-  .info-icon svg{width:20px;height:20px}
   .info-value{font-size:.85rem}
   .hours-head{padding:18px 20px 14px;gap:12px}
-  .hours-head-icon{width:42px;height:42px;border-radius:12px}
-  .hours-head-icon svg{width:22px;height:22px}
-  .hours-head-label{font-size:.95rem}
-  .hours-status{margin:0 20px 16px;padding:10px 16px;font-size:.8rem}
   .hours-shift{padding:14px 20px;gap:12px}
-  .hours-shift-icon{width:34px;height:34px;border-radius:10px}
-  .hours-shift-icon svg{width:16px;height:16px}
-  .hours-shift-time{font-size:.85rem}
-  .hours-card{border-radius:var(--r-m)}
   .weather-section{padding:70px 0}
-  .weather-card{padding:28px 22px;border-radius:var(--r-l)}
-  .weather-main{gap:20px;padding-bottom:24px;margin-bottom:24px;flex-wrap:wrap}
-  .weather-main-icon{width:80px;height:80px;border-radius:22px}
-  .weather-main-icon svg{width:42px;height:42px}
-  .weather-temp{font-size:3rem;letter-spacing:-2px}
-  .weather-condition{font-size:.92rem}
-  .weather-message{padding:14px 18px;font-size:.85rem;gap:10px;margin-bottom:24px;border-radius:var(--r-s)}
-  .weather-hourly-grid{grid-template-columns:repeat(3,1fr);gap:10px}
-  .weather-hour{padding:14px 8px;border-radius:var(--r-s)}
-  .weather-hour-temp{font-size:.95rem}
+  .weather-card{padding:20px 18px;border-radius:var(--r-m);max-width:100%}
+  .weather-main{gap:14px;padding-bottom:16px;margin-bottom:16px;flex-wrap:wrap}
+  .weather-main-icon{width:56px;height:56px;border-radius:16px}
+  .weather-main-icon svg{width:28px;height:28px}
+  .weather-temp{font-size:2.2rem;letter-spacing:-1.5px}
+  .weather-condition{font-size:.8rem}
+  .weather-message{padding:12px 14px;font-size:.78rem;gap:8px;margin-bottom:18px}
+  .weather-hourly-grid{grid-template-columns:repeat(3,1fr);gap:8px}
+  .weather-hour{padding:10px 6px}
+  .weather-hour-temp{font-size:.85rem}
+  .weather-hour-time{font-size:.62rem;margin-bottom:6px}
+  .weather-hour-icon{width:24px;height:24px;margin-bottom:4px}
+  .weather-hour-icon svg{width:20px;height:20px}
   .cta{padding:70px 0}
   .cta h2{font-size:1.6rem}
-  .cta p{font-size:.9rem;margin-bottom:26px}
   .cta-btns{flex-direction:column;width:100%}
   .cta-btns .btn-primary,.cta-btns .btn-ghost{width:100%}
   .footer{padding:50px 0 30px}
@@ -620,6 +594,180 @@ section:hover{filter:brightness(1.01)}
   .sidebar-icon svg{width:14px;height:14px}
   .weather-hourly-grid{grid-template-columns:repeat(2,1fr)}
 }
+
+/* ============================================
+   📐 GLOBAL SCALE — Desktop Optimization
+   ============================================ */
+.container{max-width:1080px;padding:0 20px}
+section{padding:60px 0}
+.header{padding:12px 0}
+.header.scrolled{padding:8px 0}
+.logo-img{height:32px;max-width:140px}
+.nav a{padding:7px 14px;font-size:.82rem}
+.btn-book-header{padding:10px 18px;font-size:.8rem}
+.sidebar-icon{width:38px;height:38px;border-radius:12px}
+.sidebar-icon svg{width:17px;height:17px}
+.hero{padding:80px 0 40px;min-height:80vh}
+.hero-tag{padding:8px 16px;font-size:.75rem;margin-bottom:20px}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-1.5px;margin-bottom:18px}
+.hero p{font-size:.95rem;margin-bottom:26px;max-width:540px}
+.btn-primary,.btn-ghost{padding:13px 24px;font-size:.9rem}
+.btn-primary svg,.btn-ghost svg{width:16px;height:16px}
+.sec-head{margin-bottom:40px}
+.sec-pill{padding:6px 14px;font-size:.74rem;margin-bottom:14px}
+.sec-title{font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-1px;margin-bottom:10px}
+.sec-sub{font-size:.88rem;max-width:520px}
+.stats{padding:50px 0}
+.stats-grid{gap:14px}
+.stat-card{padding:20px 14px;border-radius:18px;gap:2px}
+.stat-num{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-1.2px}
+.stat-label{font-size:.78rem;margin-top:2px}
+.services-list{max-width:780px;gap:10px}
+.service-row{padding:16px 20px;gap:14px;border-radius:18px}
+.service-icon{width:52px;height:52px;border-radius:14px}
+.service-icon svg{width:24px;height:24px}
+.service-title{font-size:.98rem;margin-bottom:3px}
+.service-desc{font-size:.8rem;line-height:1.5;margin-bottom:7px}
+.service-tag{font-size:.62rem;padding:3px 8px}
+.service-arrow{width:34px;height:34px}
+.service-arrow svg{width:14px;height:14px}
+.service-badge{top:10px;left:10px;font-size:.58rem;padding:3px 8px}
+.premium-grid{grid-template-columns:repeat(2,1fr);gap:16px;max-width:780px;margin:36px auto 0}
+.premium-card{border-radius:24px}
+.premium-header{padding:14px 20px}
+.premium-number{font-size:1.2rem}
+.premium-badge{font-size:.62rem;padding:4px 10px;gap:4px}
+.premium-badge svg{width:10px;height:10px}
+.premium-body{padding:18px;gap:14px}
+.premium-top{gap:12px}
+.premium-icon{width:56px;height:56px;border-radius:16px}
+.premium-icon::after{inset:3px;border-radius:13px}
+.premium-icon svg{width:28px;height:28px}
+.premium-title{font-size:1.05rem}
+.premium-subtitle{font-size:.72rem}
+.premium-desc{font-size:.8rem;padding:10px 12px;line-height:1.55;border-radius:10px}
+.premium-features{gap:6px}
+.premium-feature{font-size:.74rem;padding:8px 10px;border-radius:10px;gap:8px}
+.premium-feature-icon{width:16px;height:16px}
+.premium-feature-icon svg{width:9px;height:9px}
+.premium-cta{padding:11px 18px;font-size:.82rem;gap:8px}
+.premium-cta svg{width:14px;height:14px}
+.booking-wrap{max-width:640px}
+.booking-form{padding:28px;border-radius:24px}
+.booking-form h3{font-size:1.15rem}
+.booking-form > p{font-size:.8rem;margin-bottom:20px}
+.form-row{gap:12px;margin-bottom:12px}
+.form-group label{font-size:.76rem;margin-bottom:6px}
+.form-group input,.form-group select{padding:11px 14px;font-size:.86rem;border-radius:14px}
+.btn-booking{padding:14px 20px;font-size:.9rem;margin-top:16px}
+.btn-booking svg{width:16px;height:16px}
+.how-works{margin-top:36px}
+.how-title{font-size:1.1rem}
+.how-sub{font-size:.82rem;margin-bottom:22px}
+.how-steps{gap:12px}
+.how-num{width:46px;height:46px;font-size:1.1rem;margin-bottom:12px}
+.how-step h4{font-size:.85rem;margin-bottom:4px}
+.how-step p{font-size:.72rem}
+.gallery-scroll{padding:0 20px 20px;gap:14px}
+.g-item{flex:0 0 280px;height:360px;border-radius:22px}
+.g-overlay{padding:20px 18px 16px}
+.g-overlay h4{font-size:1rem}
+.g-overlay p{font-size:.76rem}
+.g-badge{padding:5px 12px;font-size:.65rem}
+.gallery-hint{font-size:.76rem;margin-top:4px}
+.tl-wrap{padding:10px 0}
+.tl-item{gap:24px;padding:14px 0}
+.tl-num{width:48px;height:48px;font-size:1rem}
+.tl-content{padding:16px 20px;border-radius:16px}
+.tl-content h3{font-size:.98rem;margin-bottom:4px}
+.tl-content p{font-size:.82rem;line-height:1.6}
+.why-grid{gap:14px}
+.why-card{padding:22px 20px;border-radius:22px}
+.why-icon{width:44px;height:44px;border-radius:12px;margin-bottom:14px}
+.why-icon svg{width:22px;height:22px}
+.why-card h3{font-size:.92rem;margin-bottom:6px}
+.why-card p{font-size:.8rem;line-height:1.6}
+.reviews-note-wrap{margin-bottom:32px;max-width:640px}
+.reviews-stat{padding:18px 20px;gap:14px;border-radius:22px}
+.reviews-stat-icon{width:48px;height:48px;border-radius:14px}
+.reviews-stat-icon svg{width:24px;height:24px}
+.reviews-stat-num{font-size:1.5rem;letter-spacing:-1.2px}
+.reviews-stat-text span{font-size:.76rem}
+.reviews-header{padding:20px 26px;gap:22px;margin-bottom:32px;max-width:540px;border-radius:22px}
+.reviews-num{font-size:2.6rem;letter-spacing:-2px}
+.reviews-info strong{font-size:.92rem}
+.reviews-info span{font-size:.72rem}
+.reviews-google-btn{padding:8px 14px;font-size:.78rem}
+.reviews-grid{gap:12px}
+.review{padding:20px 18px;border-radius:22px}
+.review-avatar{width:42px;height:42px;border-radius:12px;font-size:1rem}
+.review-name{font-size:.88rem;margin-bottom:2px}
+.review-text{font-size:.82rem;line-height:1.65}
+.tiger{padding:60px 0}
+.tiger-inner{padding:28px 32px;gap:24px;border-radius:28px}
+.tiger-emoji{font-size:2.6rem}
+.tiger-text h3{font-size:1.2rem}
+.tiger-text p{font-size:.82rem}
+.tiger-btn{padding:12px 22px;font-size:.82rem}
+.contact-wrap{gap:22px}
+.map-box{min-height:380px;border-radius:22px}
+.map-box iframe{min-height:380px}
+.contact-info{gap:11px}
+.info-card{padding:16px 18px;border-radius:22px;gap:14px}
+.info-icon{width:42px;height:42px;border-radius:12px}
+.info-icon svg{width:20px;height:20px}
+.info-icon.wa-modern svg,
+.info-icon.loc-modern svg{width:22px;height:22px}
+.info-label{font-size:.66rem;margin-bottom:2px}
+.info-value{font-size:.82rem}
+.hours-card{border-radius:22px}
+.hours-head{padding:18px 20px 14px;gap:12px}
+.hours-head-icon{width:38px;height:38px;border-radius:12px}
+.hours-head-icon svg{width:20px;height:20px}
+.hours-head-label{font-size:.88rem}
+.hours-head-sub{font-size:.68rem}
+.hours-status{margin:0 20px 14px;padding:9px 14px;font-size:.76rem;border-radius:12px}
+.hours-shift{padding:12px 20px;gap:12px}
+.hours-shift-icon{width:32px;height:32px;border-radius:10px}
+.hours-shift-icon svg{width:15px;height:15px}
+.hours-shift-label{font-size:.66rem}
+.hours-shift-time{font-size:.82rem}
+.weather-section{padding:60px 0}
+.weather-card{padding:24px 28px;max-width:720px;border-radius:24px}
+.weather-main{gap:20px;padding-bottom:18px;margin-bottom:18px}
+.weather-main-icon{width:64px;height:64px;border-radius:18px}
+.weather-main-icon svg{width:32px;height:32px}
+.weather-location{font-size:.72rem}
+.weather-location svg{width:12px;height:12px}
+.weather-temp{font-size:clamp(1.9rem,3.5vw,2.6rem);letter-spacing:-1.5px}
+.weather-temp .deg{font-size:.4em}
+.weather-condition{font-size:.82rem}
+.weather-message{padding:12px 16px;font-size:.78rem;gap:8px;margin-bottom:18px;border-radius:14px}
+.weather-message svg{width:18px;height:18px}
+.weather-hourly-title{font-size:.72rem;margin-bottom:12px;gap:8px}
+.weather-hourly-title svg{width:14px;height:14px}
+.weather-hourly-grid{gap:8px}
+.weather-hour{padding:12px 6px;border-radius:12px}
+.weather-hour-time{font-size:.64rem;margin-bottom:6px}
+.weather-hour-icon{width:26px;height:26px;margin-bottom:4px}
+.weather-hour-icon svg{width:20px;height:20px}
+.weather-hour-temp{font-size:.85rem}
+.cta{padding:70px 0}
+.cta h2{font-size:clamp(1.5rem,3.5vw,2.2rem);margin-bottom:12px}
+.cta p{font-size:.9rem;margin-bottom:24px}
+.cta-btns{gap:10px}
+.footer{padding:44px 0 28px}
+.footer-grid{gap:32px;padding-bottom:28px;margin-bottom:20px}
+.footer-logo{padding:8px 14px;border-radius:10px;margin-bottom:14px}
+.footer-logo img{height:26px}
+.footer-desc{font-size:.8rem;line-height:1.65}
+.footer h4{font-size:.86rem;margin-bottom:14px;padding-bottom:8px}
+.footer p,.footer-links a{font-size:.8rem}
+.footer-copy{font-size:.74rem}
+.float-wa{width:52px;height:52px;bottom:24px;right:24px}
+.float-wa svg{width:26px;height:26px}
+.back-top{width:44px;height:44px;bottom:88px;right:24px}
+.back-top svg{width:17px;height:17px}
 </style>
 
 <script type="application/ld+json">
@@ -761,9 +909,7 @@ section:hover{filter:brightness(1.01)}
 
 <a href="#booking" class="service-row popular reveal">
 <span class="service-badge">⭐ الأكثر طلباً</span>
-<div class="service-icon">
-<svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-</div>
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
 <div class="service-content">
 <h3 class="service-title">غسيل داخلي - خارجي</h3>
 <p class="service-desc">غسيل شامل برغوة ثلجية + تنظيف داخلي كامل — في 15 دقيقة فقط</p>
@@ -778,9 +924,7 @@ section:hover{filter:brightness(1.01)}
 </a>
 
 <a href="#booking" class="service-row reveal">
-<div class="service-icon">
-<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-</div>
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
 <div class="service-content">
 <h3 class="service-title">غسيل تفصيلي</h3>
 <p class="service-desc">عناية كاملة داخل وخارج + واكس عالمي + تلميع Dashboard وتعطير</p>
@@ -794,9 +938,7 @@ section:hover{filter:brightness(1.01)}
 </a>
 
 <a href="#booking" class="service-row reveal">
-<div class="service-icon">
-<svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-</div>
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
 <div class="service-content">
 <h3 class="service-title">حماية PPF الاحترافية</h3>
 <p class="service-desc">فيلم حماية شفاف أو ملون يصد الخدوش والصدمات ويحفظ طلاء سيارتك</p>
@@ -811,9 +953,7 @@ section:hover{filter:brightness(1.01)}
 </a>
 
 <a href="#booking" class="service-row reveal">
-<div class="service-icon">
-<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg>
-</div>
+<div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg></div>
 <div class="service-content">
 <h3 class="service-title">النانو سيراميك</h3>
 <p class="service-desc">طبقة زجاجية تدوم سنوات — لمعان عميق وحماية من الأشعة والماء</p>
@@ -827,9 +967,7 @@ section:hover{filter:brightness(1.01)}
 </a>
 
 <a href="#booking" class="service-row reveal">
-<div class="service-icon">
-<svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-</div>
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
 <div class="service-content">
 <h3 class="service-title">التلميع الاحترافي</h3>
 <p class="service-desc">إزالة الخدوش ودوائر الغسيل — جلسات بوليش احترافية وتلميع رنقات</p>
@@ -843,9 +981,7 @@ section:hover{filter:brightness(1.01)}
 </a>
 
 <a href="#booking" class="service-row reveal">
-<div class="service-icon">
-<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-</div>
+<div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></div>
 <div class="service-content">
 <h3 class="service-title">العزل الحراري للسيارات</h3>
 <p class="service-desc">عازل حراري أمريكي معتمد — يحجب 99% من UV ويخفض حرارة السيارة</p>
@@ -859,9 +995,7 @@ section:hover{filter:brightness(1.01)}
 </a>
 
 <a href="#booking" class="service-row reveal">
-<div class="service-icon">
-<svg viewBox="0 0 24 24"><path d="M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM19 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/><path d="M3 17v-5l2-6h14l2 6v5"/><path d="M5 11h14"/></svg>
-</div>
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM19 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/><path d="M3 17v-5l2-6h14l2 6v5"/><path d="M5 11h14"/></svg></div>
 <div class="service-content">
 <h3 class="service-title">غسيل متنقل</h3>
 <p class="service-desc">نأتي إليك في منزلك أو مكتبك بنفس الجودة والاحترافية — بدون تنقل</p>
@@ -888,9 +1022,7 @@ section:hover{filter:brightness(1.01)}
   </div>
   <div class="premium-body">
     <div class="premium-top">
-      <div class="premium-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
+      <div class="premium-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <div class="premium-title-wrap">
         <h3 class="premium-title">حماية PPF الاحترافية</h3>
         <span class="premium-subtitle">فيلم حماية شفاف أو ملون</span>
@@ -921,9 +1053,7 @@ section:hover{filter:brightness(1.01)}
   </div>
   <div class="premium-body">
     <div class="premium-top">
-      <div class="premium-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg>
-      </div>
+      <div class="premium-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg></div>
       <div class="premium-title-wrap">
         <h3 class="premium-title">النانو سيراميك</h3>
         <span class="premium-subtitle">طبقة زجاجية تدوم سنوات</span>
@@ -1104,43 +1234,36 @@ section:hover{filter:brightness(1.01)}
 <p class="sec-sub">أكثر من مغسلة — تجربة عناية متكاملة</p>
 </div>
 <div class="why-grid">
-
 <div class="why-card reveal">
 <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
 <h3>+5 سنوات خبرة</h3>
 <p>خبرة طويلة في العناية بجميع أنواع السيارات بأعلى معايير الجودة</p>
 </div>
-
 <div class="why-card reveal">
 <div class="why-icon blue"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
 <h3>فريق متخصص</h3>
 <p>فريق مدرّب على أحدث تقنيات العناية والمواد العالمية المعتمدة</p>
 </div>
-
 <div class="why-card reveal">
 <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM19 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/><path d="M3 17v-5l2-6h14l2 6v5"/></svg></div>
 <h3>غسيل متنقل</h3>
 <p>نأتي إليك في منزلك أو مكتبك بنفس الجودة بدون تنقل</p>
 </div>
-
 <div class="why-card reveal">
 <div class="why-icon blue"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
 <h3>خدمة عملاء متميزة</h3>
 <p>نستقبلك بترحيب ونعتني بسيارتك كأنها سيارتنا</p>
 </div>
-
 <div class="why-card reveal">
 <div class="why-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
 <h3>نادي النمر</h3>
 <p>اشتراك شهري — وفّر أكثر واستمتع بسيارة نظيفة دائماً</p>
 </div>
-
 <div class="why-card reveal">
 <div class="why-icon blue"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
 <h3>استراحة ضيافة</h3>
 <p>جلسات مريحة، بلايستيشن، مكتبة، وضيافة سعودية</p>
 </div>
-
 </div>
 </div>
 </section>
