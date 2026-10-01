@@ -794,31 +794,13 @@ section{padding:60px 0}
   .premium-title{font-size:.88rem}
   .premium-feature{font-size:.7rem;padding:7px 9px}
 }
-/* ===== Viewport Fix — حل مشكلة الزوم ===== */
-html{
-  overflow-x:hidden !important;
-  width:100% !important;
-  max-width:100vw !important;
-}
-body{
-  overflow-x:hidden !important;
-  width:100% !important;
-  max-width:100vw !important;
-  position:relative;
-}
-.container{
-  max-width:100% !important;
-}
-img,video,iframe{
-  max-width:100% !important;
-}
-.form-group{
-  position:relative;
-}
-section{
-  max-width:100vw;
-  overflow:hidden;
-}
+/* ===== Viewport Fix ===== */
+html{overflow-x:hidden !important;width:100% !important;max-width:100vw !important}
+body{overflow-x:hidden !important;width:100% !important;max-width:100vw !important;position:relative}
+.container{max-width:100% !important}
+img,video,iframe{max-width:100% !important}
+.form-group{position:relative}
+section{max-width:100vw;overflow:hidden}
 </style>
 <script type="application/ld+json">
 {
@@ -1760,7 +1742,13 @@ function submitBooking(e) {
   msg += '━━━━━━━━━━━━━━━\n\n';
   msg += 'في انتظار تأكيد الموعد 🙏';
 
-  window.open('https://wa.me/966569849164?text=' + encodeURIComponent(msg), '_blank');
+  var isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  var waURL = 'https://wa.me/966569849164?text=' + encodeURIComponent(msg);
+  if (isMobileDevice) {
+    window.location.href = waURL;
+  } else {
+    window.open(waURL, '_blank');
+  }
 
   setTimeout(function() {
     btn.disabled = false;
