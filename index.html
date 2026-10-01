@@ -36,8 +36,8 @@
   --sh-s:0 2px 8px rgba(10,10,10,.04);--sh-m:0 12px 32px -8px rgba(10,10,10,.08);--sh-l:0 30px 60px -15px rgba(10,10,10,.15);
   --tr:.4s cubic-bezier(.2,.8,.2,1);
 }
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px}
-body{width:100%;min-height:100vh;overflow-x:hidden;background:var(--bg);color:var(--t1);font-family:'Tajawal','Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-weight:500;line-height:1.7;direction:rtl;text-align:right;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:80px;overflow-x:hidden;width:100%;max-width:100vw}
+body{width:100%;min-height:100vh;overflow-x:hidden;background:var(--bg);color:var(--t1);font-family:'Tajawal','Segoe UI',Tahoma,Geneva,Verdana,sans-serif;font-weight:500;line-height:1.7;direction:rtl;text-align:right;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;max-width:100vw;position:relative}
 h1,h2,h3,h4,h5,h6{font-weight:900;letter-spacing:-.5px;line-height:1.25}
 img,video{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit;transition:var(--tr)}
@@ -193,6 +193,7 @@ section{padding:100px 0;position:relative}
 .booking-form > p{font-size:.88rem;color:var(--t3);margin-bottom:28px;font-weight:500}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
 .form-row.full{grid-template-columns:1fr}
+.form-group{position:relative}
 .form-group label{display:block;font-size:.82rem;font-weight:800;color:var(--t1);margin-bottom:8px;letter-spacing:.3px}
 .form-group input,.form-group select{width:100%;padding:14px 16px;border:1.5px solid var(--br);border-radius:var(--r-m);font-family:inherit;font-size:.92rem;font-weight:600;color:var(--t1);background:var(--bg);transition:var(--tr);outline:none;-webkit-appearance:none;appearance:none}
 .form-group input::placeholder{color:var(--t3)}
@@ -793,6 +794,31 @@ section{padding:60px 0}
   .premium-title{font-size:.88rem}
   .premium-feature{font-size:.7rem;padding:7px 9px}
 }
+/* ===== Viewport Fix — حل مشكلة الزوم ===== */
+html{
+  overflow-x:hidden !important;
+  width:100% !important;
+  max-width:100vw !important;
+}
+body{
+  overflow-x:hidden !important;
+  width:100% !important;
+  max-width:100vw !important;
+  position:relative;
+}
+.container{
+  max-width:100% !important;
+}
+img,video,iframe{
+  max-width:100% !important;
+}
+.form-group{
+  position:relative;
+}
+section{
+  max-width:100vw;
+  overflow:hidden;
+}
 </style>
 <script type="application/ld+json">
 {
@@ -823,9 +849,12 @@ section{padding:60px 0}
 </script>
 </head>
 <body>
+
 <div class="progress-bar" id="progressBar"></div>
 <div class="spotlight" id="spotlight"></div>
+
 <a href="#services" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden" onfocus="this.style.position='fixed';this.style.right='20px';this.style.top='20px';this.style.left='auto';this.style.width='auto';this.style.height='auto';this.style.background='#0A0A0A';this.style.color='#FFF';this.style.padding='12px 20px';this.style.borderRadius='9999px';this.style.zIndex='99999'" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.top='auto';this.style.width='1px';this.style.height='1px'">انتقل للمحتوى الرئيسي</a>
+
 <aside class="sidebar-social" aria-label="تواصل اجتماعي">
 <a href="https://wa.me/966569849164" target="_blank" rel="noopener noreferrer" class="sidebar-icon wa" aria-label="واتساب">
 <svg viewBox="0 0 24 24"><path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01z"/></svg>
@@ -843,6 +872,7 @@ section{padding:60px 0}
 <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
 </a>
 </aside>
+
 <header class="header" id="header">
 <div class="container header-inner">
 <a href="#hero" class="logo-wrap" aria-label="شايني كلين">
@@ -861,7 +891,9 @@ section{padding:60px 0}
 </a>
 </div>
 </header>
+
 <main>
+
 <section class="hero" id="hero">
 <div class="hero-video-wrap" id="heroVideoWrap">
 <video id="heroVideo" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture preload="auto">
@@ -892,6 +924,7 @@ section{padding:60px 0}
 <span>SCROLL</span>
 </div>
 </section>
+
 <section class="stats">
 <div class="container">
 <div class="stats-grid">
@@ -914,6 +947,7 @@ section{padding:60px 0}
 </div>
 </div>
 </section>
+
 <section class="services" id="services">
 <div class="container">
 <div class="sec-head">
@@ -921,6 +955,7 @@ section{padding:60px 0}
 <h2 class="sec-title">كل ما تحتاجه <span class="gold">في مكان واحد</span></h2>
 <p class="sec-sub">7 خدمات احترافية بأحدث التقنيات — من الغسيل السريع إلى الحماية المتقدمة</p>
 </div>
+
 <div class="services-list">
 <a href="#booking" class="service-row popular reveal">
 <span class="service-badge">⭐ الأكثر طلباً</span>
@@ -937,6 +972,7 @@ section{padding:60px 0}
 </div>
 <div class="service-arrow"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
 </a>
+
 <a href="#booking" class="service-row reveal">
 <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
 <div class="service-content">
@@ -950,6 +986,7 @@ section{padding:60px 0}
 </div>
 <div class="service-arrow"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
 </a>
+
 <a href="#booking" class="service-row reveal">
 <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
 <div class="service-content">
@@ -964,6 +1001,7 @@ section{padding:60px 0}
 </div>
 <div class="service-arrow"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
 </a>
+
 <a href="#booking" class="service-row reveal">
 <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg></div>
 <div class="service-content">
@@ -977,6 +1015,7 @@ section{padding:60px 0}
 </div>
 <div class="service-arrow"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
 </a>
+
 <a href="#booking" class="service-row reveal">
 <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
 <div class="service-content">
@@ -990,6 +1029,7 @@ section{padding:60px 0}
 </div>
 <div class="service-arrow"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
 </a>
+
 <a href="#booking" class="service-row reveal">
 <div class="service-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg></div>
 <div class="service-content">
@@ -1003,6 +1043,7 @@ section{padding:60px 0}
 </div>
 <div class="service-arrow"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
 </a>
+
 <a href="#booking" class="service-row reveal">
 <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM19 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0z"/><path d="M3 17v-5l2-6h14l2 6v5"/><path d="M5 11h14"/></svg></div>
 <div class="service-content">
@@ -1017,6 +1058,7 @@ section{padding:60px 0}
 <div class="service-arrow"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></div>
 </a>
 </div>
+
 <div class="premium-grid">
 <div class="premium-card reveal">
   <div class="premium-header">
@@ -1048,6 +1090,7 @@ section{padding:60px 0}
     </a>
   </div>
 </div>
+
 <div class="premium-card reveal">
   <div class="premium-header">
     <span class="premium-number">02</span>
@@ -1081,6 +1124,7 @@ section{padding:60px 0}
 </div>
 </div>
 </section>
+
 <section class="booking" id="booking">
 <div class="container">
 <div class="sec-head">
@@ -1141,6 +1185,7 @@ section{padding:60px 0}
 إرسال الحجز عبر واتساب
 </button>
 </form>
+
 <div class="how-works">
 <h3 class="how-title">كيف <span>يعمل الحجز؟</span></h3>
 <p class="how-sub">4 خطوات بسيطة ويوصلك التأكيد</p>
@@ -1154,6 +1199,7 @@ section{padding:60px 0}
 </div>
 </div>
 </section>
+
 <section class="gallery" id="gallery">
 <div class="container">
 <div class="sec-head">
@@ -1210,6 +1256,7 @@ section{padding:60px 0}
 <svg viewBox="0 0 24 24" style="transform:rotate(180deg)"><polyline points="9 18 15 12 9 6"/></svg>
 </div>
 </section>
+
 <section class="timeline">
 <div class="container">
 <div class="sec-head">
@@ -1225,6 +1272,7 @@ section{padding:60px 0}
 </div>
 </div>
 </section>
+
 <section class="why">
 <div class="container">
 <div class="sec-head">
@@ -1266,6 +1314,7 @@ section{padding:60px 0}
 </div>
 </div>
 </section>
+
 <section class="reviews" id="reviews">
 <div class="container">
 <div class="sec-head">
@@ -1273,6 +1322,7 @@ section{padding:60px 0}
 <h2 class="sec-title">ثقة تُبنى <span class="gold">بالتجربة</span></h2>
 <p class="sec-sub">تقييمات حقيقية من زوارنا على Google Maps</p>
 </div>
+
 <div class="reviews-note-wrap">
   <div class="reviews-stat">
     <div class="reviews-stat-icon"><svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
@@ -1290,6 +1340,7 @@ section{padding:60px 0}
     </div>
   </div>
 </div>
+
 <div class="reviews-header">
 <div class="reviews-score">
 <span class="reviews-num">4.9</span>
@@ -1310,6 +1361,7 @@ section{padding:60px 0}
 شاهد الكل
 </a>
 </div>
+
 <div class="reviews-grid">
 <div class="review reveal">
 <div class="review-head">
@@ -1319,6 +1371,7 @@ section{padding:60px 0}
 </div></div>
 <p class="review-text">"شكرا على الشغل المحترم واستقبالكم المميز بصراحه السيارة ماعرفتها بعد التلميع الله يبارك لكم ولي زياره ثانيه."</p>
 </div>
+
 <div class="review reveal">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#059669,#065F46)">م</div>
@@ -1327,6 +1380,7 @@ section{padding:60px 0}
 </div></div>
 <p class="review-text">"ما شاء الله مغسلة مميزة وشغل احترافي وجوده في مواد غسيل وإنجاز سريع من موظفين وتعامل جميل الله يوفقهم يارب"</p>
 </div>
+
 <div class="review reveal">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#0D9488,#0F766E)">M</div>
@@ -1335,6 +1389,7 @@ section{padding:60px 0}
 </div></div>
 <p class="review-text">"شغلهم جداً يبرد القلب نظيف واحترافي ودقيق 👌 واضح اهتمامهم بأدق التفاصيل والعناية بالسيارة من الداخل والخارج."</p>
 </div>
+
 <div class="review reveal">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#7C3AED,#5B21B6)">D</div>
@@ -1343,6 +1398,7 @@ section{padding:60px 0}
 </div></div>
 <p class="review-text">"خدمه طيبه وتعامل راقي سويـت عندهم تلميع داخلي وانصح بزيارتهم بارك الله لكم."</p>
 </div>
+
 <div class="review reveal">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#334155,#0F172A)">A</div>
@@ -1351,6 +1407,7 @@ section{padding:60px 0}
 </div></div>
 <p class="review-text">"انا من جيت هاذي المغسلة ما حصل رحت اي مغسلة اخرى ذوققق شياكة رقي فالتعامل عمال ماهرين ادارة محترمة."</p>
 </div>
+
 <div class="review reveal">
 <div class="review-head">
 <div class="review-avatar" style="background:linear-gradient(135deg,#78350F,#451A03)">ع</div>
@@ -1362,6 +1419,7 @@ section{padding:60px 0}
 </div>
 </div>
 </section>
+
 <section class="tiger">
 <div class="container">
 <div class="tiger-inner reveal">
@@ -1377,6 +1435,7 @@ section{padding:60px 0}
 </div>
 </div>
 </section>
+
 <section class="contact" id="contact">
 <div class="container">
 <div class="sec-head">
@@ -1384,23 +1443,28 @@ section{padding:60px 0}
 <h2 class="sec-title">نحن <span class="gold">في خدمتك</span></h2>
 <p class="sec-sub">تفضل بزيارتنا أو تواصل عبر أي قناة</p>
 </div>
+
 <div class="contact-wrap">
 <div class="map-box reveal">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.4234785476397!2d49.6259973!3d25.3847114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e37a4e4ac7ea7df%3A0x9c3e1a5c4e9c9a5c!2sShiny%20Clean%20Car%20Wash!5e0!3m2!1sar!2ssa!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="موقع شايني كلين"></iframe>
 </div>
+
 <div class="contact-info">
 <a href="tel:0592220076" class="info-card reveal">
 <div class="info-icon blue"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
 <div class="info-text"><div class="info-label">اتصل بنا</div><div class="info-value ltr">059 222 0076</div></div>
 </a>
+
 <a href="https://wa.me/966569849164" target="_blank" rel="noopener noreferrer" class="info-card info-card-wa reveal">
 <div class="info-icon wa-modern"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
 <div class="info-text"><div class="info-label">واتساب · رد فوري</div><div class="info-value ltr">056 984 9164</div></div>
 </a>
+
 <a href="https://maps.app.goo.gl/zwa4ANXbRRTgn8Gv8?g_st=ic" target="_blank" rel="noopener noreferrer" class="info-card info-card-loc reveal">
 <div class="info-icon loc-modern"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C7.589 2 4 5.589 4 9.995c0 3.195 1.672 5.999 4.191 8.244.393.35.797.665 1.179.954.475.36.879.638 1.143.8a1.1 1.1 0 0 0 1.174 0c.264-.162.668-.44 1.143-.8.382-.289.786-.604 1.179-.954C16.328 15.994 18 13.19 18 9.995 18 5.589 14.411 2 12 2zm0 10.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg></div>
 <div class="info-text"><div class="info-label">موقعنا على الخريطة</div><div class="info-value">شارع الأمير محمد بن فهد، العزيزية الثاني، الهفوف 36441</div></div>
 </a>
+
 <div class="hours-card reveal">
   <div class="hours-head">
     <div class="hours-head-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
@@ -1425,6 +1489,7 @@ section{padding:60px 0}
 </div>
 </div>
 </section>
+
 <section class="weather-section" id="weather">
   <div class="container">
     <div class="sec-head">
@@ -1432,11 +1497,13 @@ section{padding:60px 0}
       <h2 class="sec-title">جو <span class="gold">الهفوف</span> الآن</h2>
       <p class="sec-sub">نعرض لك حالة الجو الحقيقية — لأن عناية سيارتك تتأثر بالطقس</p>
     </div>
+
     <div class="weather-card" id="weatherCard">
       <div class="weather-loading" id="weatherLoading">
         <div class="spinner"></div>
         <div>جاري قراءة الجو في الهفوف...</div>
       </div>
+
       <div id="weatherContent" style="display:none">
         <div class="weather-main">
           <div class="weather-main-icon" id="wmIcon">
@@ -1451,10 +1518,12 @@ section{padding:60px 0}
             <div class="weather-condition" id="wmCond">جاري التحديث</div>
           </div>
         </div>
+
         <div class="weather-message" id="wmMessage">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           <span>جاري تحليل الجو...</span>
         </div>
+
         <div class="weather-hourly">
           <div class="weather-hourly-title">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
@@ -1466,6 +1535,7 @@ section{padding:60px 0}
     </div>
   </div>
 </section>
+
 <section class="cta">
 <div class="container cta-content">
 <h2>جاهز لتجربة <span>شايني كلين</span>؟</h2>
@@ -1482,7 +1552,9 @@ section{padding:60px 0}
 </div>
 </div>
 </section>
+
 </main>
+
 <footer class="footer">
 <div class="container">
 <div class="footer-grid">
@@ -1520,25 +1592,31 @@ section{padding:60px 0}
 </div>
 </div>
 </footer>
+
 <a href="https://wa.me/966569849164?text=السلام%20عليكم%2C%20أبغى%20أحجز%20موعد" target="_blank" rel="noopener noreferrer" class="float-wa" aria-label="واتساب">
 <svg viewBox="0 0 16 16"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
 </a>
+
 <button class="back-top" id="backTop" aria-label="العودة للأعلى">
 <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
+
 <script>
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+
 var progressBar = document.getElementById('progressBar');
 window.addEventListener('scroll', function() {
   var h = document.documentElement.scrollHeight - window.innerHeight;
   var p = h > 0 ? (window.pageYOffset / h) * 100 : 0;
   progressBar.style.width = p + '%';
 }, { passive: true });
+
 var header = document.getElementById('header');
 window.addEventListener('scroll', function() {
   if (window.pageYOffset > 50) header.classList.add('scrolled');
   else header.classList.remove('scrolled');
 }, { passive: true });
+
 var heroVideo = document.getElementById('heroVideoWrap');
 var isMobile = window.matchMedia('(max-width:768px)').matches;
 if (heroVideo && !isMobile) {
@@ -1549,22 +1627,27 @@ if (heroVideo && !isMobile) {
     }
   }, { passive: true });
 }
+
 document.addEventListener('DOMContentLoaded', function() {
   var v = document.getElementById('heroVideo');
   if (!v) return;
   v.muted = true; v.loop = true;
   v.setAttribute('muted', ''); v.setAttribute('playsinline', ''); v.setAttribute('webkit-playsinline', '');
+
   function play() { if (v.paused || v.ended) v.play().catch(function(){}); }
   function markLoaded() { v.classList.add('loaded'); }
   if (v.readyState >= 2) markLoaded();
   v.addEventListener('loadeddata', markLoaded);
   v.addEventListener('canplay', markLoaded);
   play();
+
   ['touchstart','click','scroll'].forEach(function(ev){
     var once = function() { play(); document.removeEventListener(ev, once); };
     document.addEventListener(ev, once, { passive: true });
   });
+
   document.addEventListener('visibilitychange', function() { if (!document.hidden) play(); });
+
   var heroEl = document.getElementById('hero');
   if (heroEl && 'IntersectionObserver' in window) {
     var heroObs = new IntersectionObserver(function(entries) {
@@ -1574,7 +1657,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1 });
     heroObs.observe(heroEl);
   }
+
   v.addEventListener('ended', function() { v.currentTime = 0; v.play().catch(function(){}); });
+
   v.addEventListener('pause', function() {
     setTimeout(function() {
       var heroEl2 = document.getElementById('hero');
@@ -1585,6 +1670,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 150);
   });
 });
+
 function animateCounters() {
   document.querySelectorAll('.stat-num[data-count]').forEach(function(el) {
     if (el.dataset.done === '1') return;
@@ -1611,6 +1697,7 @@ if (statsEl) {
   }, { threshold: 0.3 });
   so.observe(statsEl);
 }
+
 function updateHours() {
   var now = new Date();
   var t = now.getHours() * 60 + now.getMinutes();
@@ -1632,29 +1719,35 @@ function updateHours() {
 }
 updateHours();
 setInterval(updateHours, 60000);
+
 function submitBooking(e) {
   e.preventDefault();
   var btn = e.target.querySelector('.btn-booking');
   var originalHTML = btn.innerHTML;
+
   var name = document.getElementById('name').value.trim();
   var phone = document.getElementById('phone').value.trim();
   var service = document.getElementById('service').value;
   var car = document.getElementById('car').value;
   var date = document.getElementById('date').value;
   var time = document.getElementById('time').value;
+
   if (!name || !phone || !service || !car || !date || !time) {
     alert('⚠️ الرجاء تعبئة جميع الحقول'); return false;
   }
   if (!/^05[0-9]{8}$/.test(phone)) {
     alert('⚠️ رقم الجوال يجب أن يبدأ بـ 05 ويكون 10 أرقام'); return false;
   }
+
   btn.disabled = true;
   btn.style.opacity = '.7';
   btn.innerHTML = '⏳ جاري التحويل لواتساب...';
+
   var d = new Date(date);
   var days = ['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
   var dayName = days[d.getDay()];
   var dateStr = dayName + ' — ' + date;
+
   var msg = 'السلام عليكم 🌹\n\n';
   msg += 'أبغى أحجز موعد في *شايني كلين*:\n';
   msg += '━━━━━━━━━━━━━━━\n';
@@ -1666,25 +1759,31 @@ function submitBooking(e) {
   msg += '⏰ الوقت: ' + time + '\n';
   msg += '━━━━━━━━━━━━━━━\n\n';
   msg += 'في انتظار تأكيد الموعد 🙏';
+
   window.open('https://wa.me/966569849164?text=' + encodeURIComponent(msg), '_blank');
+
   setTimeout(function() {
     btn.disabled = false;
     btn.style.opacity = '1';
     btn.innerHTML = originalHTML;
   }, 2500);
+
   return false;
 }
+
 var dateInput = document.getElementById('date');
 if (dateInput) {
   var today = new Date().toISOString().split('T')[0];
   dateInput.setAttribute('min', today);
 }
+
 var backTop = document.getElementById('backTop');
 window.addEventListener('scroll', function() {
   if (window.pageYOffset > 500) backTop.classList.add('show');
   else backTop.classList.remove('show');
 }, { passive: true });
 backTop.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
 document.querySelectorAll('a[href^="#"]').forEach(function(a) {
   a.addEventListener('click', function(e) {
     var id = this.getAttribute('href');
@@ -1698,6 +1797,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     }
   });
 });
+
 var reveals = document.querySelectorAll('.reveal');
 var revealObs = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry, i) {
@@ -1708,6 +1808,7 @@ var revealObs = new IntersectionObserver(function(entries) {
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 reveals.forEach(function(el) { revealObs.observe(el); });
+
 var gs = document.getElementById('galleryScroll');
 if (gs) {
   var isDown = false, startX, scrollLeft;
@@ -1725,6 +1826,7 @@ if (gs) {
     gs.scrollLeft = scrollLeft - (x - startX) * 1.5;
   });
 }
+
 (function breathingFeature() {
   var spotlight = document.getElementById('spotlight');
   if (!spotlight) return;
@@ -1747,6 +1849,7 @@ if (gs) {
   }
   document.addEventListener('mouseleave', function() { spotlight.classList.remove('active'); });
 })();
+
 (function weatherWidget() {
   var loading = document.getElementById('weatherLoading');
   var content = document.getElementById('weatherContent');
@@ -1756,8 +1859,10 @@ if (gs) {
   var msgEl = document.getElementById('wmMessage');
   var hourlyEl = document.getElementById('wmHourly');
   if (!content) return;
+
   var HOFUF_LAT = 25.3833;
   var HOFUF_LON = 49.5872;
+
   var ICONS = {
     sun: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>',
     moon: '<svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
@@ -1769,6 +1874,7 @@ if (gs) {
     snow: '<svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>',
     thunder: '<svg viewBox="0 0 24 24"><path d="M19 16.9A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"/><polyline points="13 11 9 17 15 17 11 23"/></svg>'
   };
+
   function getIconKey(code, isDay) {
     if (code === 0 || code === 1) return isDay ? 'sun' : 'moon';
     if (code === 2) return isDay ? 'cloudSun' : 'cloudMoon';
@@ -1781,6 +1887,7 @@ if (gs) {
     if (code >= 95) return 'thunder';
     return 'cloud';
   }
+
   function getConditionText(code, isDay) {
     if (code === 0) return isDay ? 'صحو تماماً' : 'سماء صافية';
     if (code === 1) return 'صحو بشكل عام';
@@ -1795,6 +1902,7 @@ if (gs) {
     if (code >= 95) return 'عواصف رعدية';
     return 'غائم';
   }
+
   function getMessage(code, isDay, temp) {
     var isDust = (code === 45 || code === 48) || (code <= 3 && temp > 42);
     var isRain = (code >= 51 && code <= 67) || (code >= 80 && code <= 99);
@@ -1805,6 +1913,7 @@ if (gs) {
     if (!isDay) return { text:'🌙 الجو ليلي مناسب — احجز غسلتك الصباحية وخلنا نتولى الباقي.' };
     return { text:'✨ الجو مناسب اليوم — فرصة ممتازة لتلميع سيارتك.' };
   }
+
   function formatHour(isoTime) {
     var d = new Date(isoTime);
     var h = d.getHours();
@@ -1813,6 +1922,7 @@ if (gs) {
     if (display === 0) display = 12;
     return display + ':00 ' + suffix;
   }
+
   function renderHourly(hourly, currentTime) {
     var times = hourly.time;
     var temps = hourly.temperature_2m;
@@ -1837,11 +1947,13 @@ if (gs) {
     }
     hourlyEl.innerHTML = html;
   }
+
   var url = 'https://api.open-meteo.com/v1/forecast?latitude=' + HOFUF_LAT +
             '&longitude=' + HOFUF_LON +
             '&current=temperature_2m,weather_code,is_day' +
             '&hourly=temperature_2m,weather_code,is_day' +
             '&timezone=Asia/Riyadh&forecast_days=1';
+
   fetch(url)
     .then(function(r) { return r.json(); })
     .then(function(data) {
@@ -1866,5 +1978,6 @@ if (gs) {
     });
 })();
 </script>
+
 </body>
 </html>
